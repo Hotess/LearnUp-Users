@@ -1,0 +1,10 @@
+<section class="users">
+    <ul class="users__ul">
+        <li class="users__li" *ngFor="let user of users; index as i">
+            <a class="users__anchor" [title]="user.fullName" routerLink="/users/{{user.id}}">
+                <div class="users__index">{{1 + i}}</div>{{user.fullName}}
+            </a>
+            <button type="button" class="users__delete" (click)="deleteUser(user)"></button>
+        </li>
+    </ul>
+</section>

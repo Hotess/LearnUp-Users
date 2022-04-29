@@ -1,0 +1,12 @@
+<div>
+    <div *ngIf="user">
+        <form class="form__users" (submit)="save()">
+            <label for="fio" class="form__label">ФИО</label>
+            <ngx-dadata [config]="configFio" [(ngModel)]="user.fullName" id="fio" name="fio" placeholder="Введите ФИО"></ngx-dadata>
+            <label for="address" class="form__label">Адрес</label>
+            <ngx-dadata [config]="configAddress" [(ngModel)]="user.address" id="address" name="address" placeholder="Введите адрес">
+            </ngx-dadata>
+            <button type="submit" class="form__submit">Сохранить</button>
+        </form>
+    </div>
+</div>
